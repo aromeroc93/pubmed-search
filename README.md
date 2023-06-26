@@ -9,3 +9,5 @@ Current usage: `python3 pubmed-seach.py [query] [n]` where `n` is and integer de
 20230620 - Initialized repo.
 
 20230620 - Added support to write output to `.md` file and to choose a result and get its DOI to copy.
+
+20230626 - Added a comment for a reminder of a new functionality in the script.

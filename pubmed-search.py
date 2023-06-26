@@ -10,7 +10,7 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: pubmed-search.py [query] [days]")
         sys.exit(1)
-
+    
     Entrez.email = "aromeroc93@gmail.com"
     Entrez.api_key = "510d2439a3c3615a6f94e14430a9e33a1c08"
 
@@ -30,6 +30,8 @@ def main():
     file.write("## " + today + "\n\nFound " + str(len(idlist)) + " papers from query " + argv[1] + " in the last " + argv[2] + " days.\n\n")
     doi_list = []
 
+    # Add some way to check how many results are already in the outpu file/check the last entry, and only consider the new entries.
+    
     for record in records:
         title = record.get("TI", "?")
         authors = record.get("AU", "?")
